@@ -1,0 +1,114 @@
+/* Reset and Font Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: url('bgg.png') no-repeat center center/cover;
+    color: white;
+}
+
+/* Wrapper for Form */
+.wrapper {
+    background: linear-gradient(to bottom right, #000428, #004e92);
+    padding: 40px;
+    padding-left: 70px;
+    padding-right: 70px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Form Title */
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+/* Label Styling */
+form label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+    letter-spacing: 0.5px;
+}
+
+/* Input Field Styling */
+form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: #f9f9f9;
+}
+
+form input:focus {
+    border-color: #6200ea;
+}
+/* Button Styling with Hover Gradient */
+form button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, #6b28c8, #5227b0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.5s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #30e0ff, #0084ff); /* Gradient for hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 30px;
+    }
+
+    .header {
+        font-size: 24px;
+    }
+
+    form input {
+        padding: 10px;
+    }
+
+    form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
