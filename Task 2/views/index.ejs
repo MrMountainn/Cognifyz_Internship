@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognifyz Intern Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="header">Cognifyz  Intern  Portal</h1>
+        <form action="/submit" method="POST" onsubmit="return validateForm()">
+            <h2>Login</h2>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <label>Username</label>
+            <input type="text" name="username" required>
+
+            <label>Phone</label>
+            <input type="tel" name="phone" required pattern="[0-9]{10}">
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            const email = document.forms[0]["email"].value;
+            const password = document.forms[0]["password"].value;
+
+            if (!email.includes("@") || password.length < 6) {
+                alert("Invalid email or password.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
